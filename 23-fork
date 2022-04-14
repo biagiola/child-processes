@@ -1,0 +1,2 @@
+# 10 request with the concurrence of 10
+loadtest -n 10 -c 10 http://localhost:3000/one

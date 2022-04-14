@@ -1,0 +1,7 @@
+error comes from when the command not found or command has missing arguments
+stderr is error that comming after command was executed
+
+exec: we use this when we want to execute commands that will not break the buffer
+execFile: same as above but with exceuting a .sh file
+spawn: this do not use the buffer, so we can make ei: "find /"
+

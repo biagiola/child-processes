@@ -1,0 +1,11 @@
+with the cluster module we can check whether the process is a master process or child process.
+if there is a master process, we begin to fork a new worker process and then we start to listening inside the worker process.
+and the master process will not listening for any other request but only the worker processes will be listening on some port
+
+all the workers and running on the same port
+
+loadtest is for testing multiple request, apache brenchmark is similar to that
+
+even if we have one cpu to run our nodejs app, we must to use cluster to avoid to crash down our service so our application should have zero downtime
+
+
