@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { fork } = require('child_process');
 const app = express();
 
 app.get('/one', (req, res) => {
@@ -13,7 +13,7 @@ app.get('/two', async (req, res) => {
 })
 
 app.get('/three', (req, res) => {
-    const child = fork('./longstask.js');
+    const child = fork('./longtasks.js');
     child.send('start');
     child.on('message', (sum) => {
 	res.send({ sum: sum });
